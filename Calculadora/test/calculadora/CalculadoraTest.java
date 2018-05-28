@@ -5,20 +5,37 @@
  */
 package calculadora;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 
 /**
  *
  * @author EDILBERTO MEJIA MEZA
  */
+@RunWith(value = Parameterized.class)
 public class CalculadoraTest {
-    static Calculadora calc;
-    public CalculadoraTest() {
+     @Parameterized.Parameters
+    public static Iterable<Object[]> getData(){
+        List<Object[]> obj=new ArrayList<>();
+        obj.add(new Object[]{3,1,4});
+        obj.add(new Object[]{2,3,5});
+        obj.add(new Object[]{3,3,6});
+        return obj;
+    }
+     private int a,b,exp;
+     static Calculadora calc;
+    public CalculadoraTest(int a, int b, int exp) {
+        this.a=a;
+        this.b=b;
+        this.exp=exp;
     }
     
    @BeforeClass
