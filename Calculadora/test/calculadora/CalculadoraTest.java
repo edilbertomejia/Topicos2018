@@ -59,7 +59,7 @@ public class CalculadoraTest {
     /**
      * Test of suma method, of class Calculadora.
      */
-    @Test
+    /* @Test
     public void testSuma() {
         System.out.println("suma");
         int a = 0;
@@ -69,8 +69,18 @@ public class CalculadoraTest {
         int result = instance.suma(a, b);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-       // fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
+    }*/
+    @Test
+    public void testSuma() {
+        System.out.println("suma");
+        Calculadora instance = new Calculadora();
+        int result = instance.suma(a, b);
+        assertEquals(exp, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
     }
+
 
     /**
      * Test of resta method, of class Calculadora.
